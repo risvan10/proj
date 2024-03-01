@@ -32,6 +32,11 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okhttp)
+
+        }
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -40,12 +45,32 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+            implementation("media.kamel:kamel-image:0.9.1")
+            implementation(libs.ktor.client.core)
+            implementation(libs.kotlinx.coroutines.core)
+            api(compose.foundation)
+            api(compose.animation)
+            val precomposeVersion = "1.5.10"
+            api("moe.tlaster:precompose:$precomposeVersion")
+            api("moe.tlaster:precompose-molecule:$precomposeVersion")
+            api("moe.tlaster:precompose-viewmodel:$precomposeVersion")
+            api("moe.tlaster:precompose-koin:$precomposeVersion")
+            implementation("com.darkrockstudios:mpfilepicker:3.1.0")
+
+            implementation(project.dependencies.platform("com.google.firebase:firebase-bom:32.7.0"))
+
+            implementation("dev.gitlive:firebase-firestore:1.11.0")
+            implementation("dev.gitlive:firebase-storage:1.11.0")
+            implementation("dev.gitlive:firebase-common:1.11.0")
+            implementation("dev.gitlive:firebase-app:1.11.0")
+            implementation("dev.gitlive:firebase-installations:1.11.0")
+            implementation("com.google.firebase:firebase-storage")
         }
     }
 }
 
 android {
-    namespace = "org.example.project"
+    namespace = "org.purchaser.app"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -53,7 +78,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "org.example.project"
+        applicationId = "org.purchaser.app"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -77,4 +102,11 @@ android {
         debugImplementation(libs.compose.ui.tooling)
     }
 }
+dependencies {
+    implementation("androidx.core:core-ktx:+")
+    implementation("androidx.core:core-ktx:+")
+    implementation("androidx.core:core-ktx:+")
+    implementation("androidx.core:core-ktx:+")
 
+
+}
