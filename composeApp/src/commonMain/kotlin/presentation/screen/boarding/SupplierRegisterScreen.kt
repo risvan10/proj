@@ -29,11 +29,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.darkrockstudios.libraries.mpfilepicker.FilePicker
-import dev.gitlive.firebase.Firebase
-import dev.gitlive.firebase.firestore.firestore
-import dev.gitlive.firebase.storage.File
-import dev.gitlive.firebase.storage.FirebaseStorage
-import dev.gitlive.firebase.storage.storage
 import io.ktor.util.Identity.encode
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -135,13 +130,13 @@ fun SupplierRegisterScreen(
                 val fileType = listOf("jpg", "png")
                 FilePicker(show = showFilePicker, fileExtensions = fileType) { file ->
                     showFilePicker = false
-                    CoroutineScope(Dispatchers.IO).launch {
-                        val ref = Firebase.storage.reference
-                        if (file != null) {
-                            ref.putFile(file.platformFile as File)
-                        }
-
-                    }
+//                    CoroutineScope(Dispatchers.IO).launch {
+//                        val ref = Firebase.storage.reference
+//                        if (file != null) {
+//                            ref.putFile(file.platformFile as File)
+//                        }
+//
+//                    }
                 }
                 DefaultFilledButton(
                         text = "Pick File",

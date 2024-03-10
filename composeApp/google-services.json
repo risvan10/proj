@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882068437845",
+    "project_id": "purchaser-dbcba",
+    "storage_bucket": "purchaser-dbcba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882068437845:android:862b4276f3310a670a0ddc",
+        "android_client_info": {
+          "package_name": "org.app.purchaser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaFmE7_2assy_xP8NBD_6KeyQkC2-NxlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -56,15 +56,15 @@ kotlin {
             api("moe.tlaster:precompose-viewmodel:$precomposeVersion")
             api("moe.tlaster:precompose-koin:$precomposeVersion")
             implementation("com.darkrockstudios:mpfilepicker:3.1.0")
-
-            implementation(project.dependencies.platform("com.google.firebase:firebase-bom:32.7.0"))
-
-            implementation("dev.gitlive:firebase-firestore:1.11.0")
-            implementation("dev.gitlive:firebase-storage:1.11.0")
-            implementation("dev.gitlive:firebase-common:1.11.0")
-            implementation("dev.gitlive:firebase-app:1.11.0")
-            implementation("dev.gitlive:firebase-installations:1.11.0")
-            implementation("com.google.firebase:firebase-storage")
+//
+//            implementation(project.dependencies.platform("com.google.firebase:firebase-bom:32.7.0"))
+//
+//            implementation("dev.gitlive:firebase-firestore:1.11.0")
+//            implementation("dev.gitlive:firebase-storage:1.11.0")
+//            implementation("dev.gitlive:firebase-common:1.11.0")
+//            implementation("dev.gitlive:firebase-app:1.11.0")
+//            implementation("dev.gitlive:firebase-installations:1.11.0")
+//            implementation("com.google.firebase:firebase-storage")
         }
     }
 }
