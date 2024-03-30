@@ -29,6 +29,7 @@ import presentation.screen.boarding.BoardingScreen
 import presentation.screen.boarding.CustomerRegisterFirstScreen
 import presentation.screen.boarding.LoginScreen
 import presentation.screen.boarding.SupplierRegisterScreen
+import presentation.screen.home.HomeScreen
 import presentation.theme.PurchaserTheme
 
 @OptIn(ExperimentalResourceApi::class)
@@ -40,7 +41,7 @@ fun App() {
             MaterialTheme {
                 NavHost(
                     navigator = navController,
-                    initialRoute = Destination.LoginScreen.route
+                    initialRoute = Destination.HomeScreen.route //Destination.LoginScreen.route
                 ){
                     scene(Destination.BoardingScreen.route){
                         BoardingScreen(navController)
@@ -72,6 +73,9 @@ fun App() {
                             }
 
                         )
+                    }
+                    scene(Destination.HomeScreen.route){
+                        HomeScreen()
                     }
                 }
             }
